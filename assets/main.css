@@ -74,7 +74,7 @@ body {
 	line-height: 1.0;
 	word-wrap: break-word;
 	overflow-x: hidden;
-	background-color: #EDEDED;
+	background-color: #002171;
 }
 
 u {
@@ -236,7 +236,7 @@ html {
 	margin-left: -50vw;
 }
 
-body.is-loading #main {
+body.is-loading #main, body.is-loading #nav{
 	opacity: 0;
 	-moz-filter: blur(2px);
 	-webkit-filter: blur(2px);
@@ -244,7 +244,7 @@ body.is-loading #main {
 	filter: blur(2px);
 }
 
-body.is-instant #main, body.is-instant #main > .inner > *, body.is-instant #main > .inner > section > * {
+body.is-instant #main, body.is-instant #main > .inner > *, body.is-instant #main > .inner > section > * ,body.is-instant #nav, body.is-instant #nav > .inner > *, body.is-instant #nav > .inner > section > * {
 	-moz-transition: none !important;
 	-webkit-transition: none !important;
 	-ms-transition: none !important;
@@ -275,7 +275,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 	display: block;
 	position: fixed;
 	top: 0;
-	z-index: 100;
+	z-index: 3;
 	letter-spacing: 0.3rem;
 }
 
@@ -345,24 +345,24 @@ h1 .li, h2 .li, h3 .li, p .li {
 	font-weight: 400;
 }
 
-.review {
+.review, .repuso_content {
 	font-size: 1rem;
 	display: block;
 }
 
-#review-schmoo br + br {
+#review-schmoo br + br,#review-nutt br + br, #review-maria br + br, .repuso_content {
 	margin-top: 0.975rem;
 }
 
-#review-schmoo:not(:first-child) {
+#review-schmoo:not(:first-child),#review-nutt:not(:first-child),#review-maria:not(:first-child),.repuso_content:not(:first-child) {
 	margin-top: 2.375rem !important;
 }
 
-#review-schmoo:not(:last-child) {
+#review-schmoo:not(:last-child),#review-nutt:not(:last-child), #review-maria:not(:last-child),.repuso_content:not(:last-child) {
 	margin-bottom: 2.375rem !important;
 }
 
-#review-schmoo {
+#review-schmoo,#review-nutt, #review-maria,.repuso_content {
 	text-align: left;
 	color: #FFFFFF;
 	letter-spacing: 0.05rem;
@@ -371,49 +371,7 @@ h1 .li, h2 .li, h3 .li, p .li {
 	font-weight: 400;
 }
 
-#review-nutt br + br {
-	margin-top: 0.975rem;
-}
 
-#review-nutt:not(:first-child) {
-	margin-top: 2.375rem !important;
-}
-
-#review-nutt:not(:last-child) {
-	margin-bottom: 2.375rem !important;
-}
-
-#review-nutt {
-	text-align: left;
-	color: #FFFFFF;
-	letter-spacing: 0.05rem;
-	width: calc(100% + 0.05rem);
-	/*font-size: 1.25em;*/
-	line-height: 1.625;
-	font-weight: 400;
-}
-
-#review-maria br + br {
-	margin-top: 0.975rem;
-}
-
-#review-maria:not(:first-child) {
-	margin-top: 2.375rem !important;
-}
-
-#review-maria:not(:last-child) {
-	margin-bottom: 2.375rem !important;
-}
-
-#review-maria {
-	text-align: left;
-	color: #FFFFFF;
-	letter-spacing: 0.05rem;
-	width: calc(100% + 0.05rem);
-	/*font-size: 1.25em;*/
-	line-height: 1.625;
-	font-weight: 400;
-}
 
 h1.style2, h2.style2, h3.style2, p.style2 br + br {
 	margin-top: 0.75rem;
@@ -3194,7 +3152,7 @@ body.is-touch #container-header {
 	text-align: center;
 	padding: 2.25rem 4rem;
 	width: 70rem;
-	background-color: transparent;
+	background-color: #fff;
 }
 
 #footer-container.default > .inner {
